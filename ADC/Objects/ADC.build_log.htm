@@ -1,0 +1,165 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.32.0.0
+Copyright (C) 2020 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Abhinav Lal, College, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.32.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.14.1
+Assembler:       Armasm.exe V6.14.1
+Linker/Locator:  ArmLink.exe V6.14.1
+Library Manager: ArmAr.exe V6.14.1
+Hex Converter:   FromElf.exe V6.14.1
+CPU DLL:         SARMCM3.DLL V5.32.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.8.0
+Dialog DLL:      TCM.DLL V1.46.0.0
+ 
+<h2>Project:</h2>
+D:\Documents\Electronics\ARM\Keil\ADC\ADC.uvprojx
+Project File Date:  11/20/2020
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.14.1', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'Target 1'
+assembling startup_stm32f10x_md.s...
+RTE/Device/STM32F103C8/system_stm32f10x.c(167): warning: no previous extern declaration for non-static variable 'AHBPrescTable' [-Wmissing-variable-declarations]
+__I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
+            ^
+RTE/Device/STM32F103C8/system_stm32f10x.c(167): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+__I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
+    ^
+1 warning generated.
+compiling system_stm32f10x.c...
+main.c(2): warning: In file included from...
+./lcd.h(60): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
+        LCD_bit(GPIO_D0, D0, a & 0b00000001);
+                                 ^
+./lcd.h(61): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
+        LCD_bit(GPIO_D1, D1, a & 0b00000010);
+                                 ^
+./lcd.h(62): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
+        LCD_bit(GPIO_D2, D2, a & 0b00000100);
+                                 ^
+./lcd.h(63): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
+        LCD_bit(GPIO_D3, D3, a & 0b00001000);
+                                 ^
+./lcd.h(64): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
+        LCD_bit(GPIO_D4, D4, a & 0b00010000);
+                                 ^
+./lcd.h(65): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
+        LCD_bit(GPIO_D5, D5, a & 0b00100000);
+                                 ^
+./lcd.h(66): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
+        LCD_bit(GPIO_D6, D6, a & 0b01000000);
+                                 ^
+./lcd.h(67): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
+        LCD_bit(GPIO_D7, D7, a & 0b10000000);
+                                 ^
+./lcd.h(81): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOA -> CRH &= ~((1<<2) | (1<<3));
+                     ~~ ^~~~~~~~~~~~~~~~~~
+./lcd.h(84): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOA -> CRH &= ~((1<<6) | (1<<7));
+                     ~~ ^~~~~~~~~~~~~~~~~~
+./lcd.h(87): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOA -> CRH &= ~((1<<10) | (1<<11));
+                     ~~ ^~~~~~~~~~~~~~~~~~~~
+./lcd.h(90): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOA -> CRH &= ~((1<<14) | (1<<15));
+                     ~~ ^~~~~~~~~~~~~~~~~~~~
+./lcd.h(93): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOA -> CRH &= ~((1<<18) | (1<<19));
+                     ~~ ^~~~~~~~~~~~~~~~~~~~
+./lcd.h(99): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOB -> CRH &= ~((1<<18) | (1<<19));
+                     ~~ ^~~~~~~~~~~~~~~~~~~~
+./lcd.h(102): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOB -> CRH &= ~((1<<22) | (1<<23));
+                     ~~ ^~~~~~~~~~~~~~~~~~~~
+./lcd.h(105): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOB -> CRH &= ~((1<<26) | (1<<27));
+                     ~~ ^~~~~~~~~~~~~~~~~~~~
+./lcd.h(108): warning: signed shift result (0x80000000) sets the sign bit of the shift expression's type ('int') and becomes negative [-Wshift-sign-overflow]
+        GPIOB -> CRH &= ~((1<<30) | (1<<31));
+                                     ~^ ~~
+./lcd.h(111): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOB -> CRL &= ~((1<<22) | (1<<23));
+                     ~~ ^~~~~~~~~~~~~~~~~~~~
+./lcd.h(147): warning: variable length array used [-Wvla]
+        char str[l];
+                ^
+./lcd.h(150): warning: passing 'char [l]' to parameter of type 'unsigned char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+        LCD_string(str);
+                   ^~~
+./lcd.h(137): note: passing argument to parameter 's' here
+void LCD_string(unsigned char *s)
+                               ^
+./lcd.h(155): warning: variable length array used [-Wvla]
+        char str[l];
+                ^
+./lcd.h(157): warning: passing 'char [l]' to parameter of type 'unsigned char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+        LCD_string(str);
+                   ^~~
+./lcd.h(137): note: passing argument to parameter 's' here
+void LCD_string(unsigned char *s)
+                               ^
+main.c(26): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOA -> CRL &= ~((1<<2) | (1<<3) | (1<<4) | (1<<5));
+                     ~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.c(29): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        RCC -> CFGR &= ~(1<<14);
+                    ~~ ^~~~~~~~
+main.c(37): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        ADC1 -> SQR3 &= ~((1<<1) | (1<<2) | (1<<3) | (1<<4));
+                     ~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.c(75): warning: passing 'char [12]' to parameter of type 'unsigned char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+                LCD_string("ADC value: ");
+                           ^~~~~~~~~~~~~
+./lcd.h(137): note: passing argument to parameter 's' here
+void LCD_string(unsigned char *s)
+                               ^
+26 warnings generated.
+compiling main.c...
+linking...
+Program Size: Code=5804 RO-data=428 RW-data=0 ZI-data=1632  
+".\Objects\ADC.axf" - 0 Error(s), 27 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.7.0.pack
+                ARM.CMSIS.5.7.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.4.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F1xx_DFP.2.3.0.pack
+                Keil.STM32F1xx_DFP.2.3.0
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 1.0.0
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\Device\STM32F103C8
+  .\RTE\_Target_1
+  C:\Users\Abhinav\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include
+  C:\Users\Abhinav\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.4.0
+
+   * Component: Keil::Device:Startup:1.0.0
+      Source file:   Device\Source\system_stm32f10x.c
+      Source file:   Device\Source\ARM\STM32F1xx_OPT.s
+      Source file:   Device\Source\ARM\startup_stm32f10x_md.s
+      Include file:  RTE_Driver\Config\RTE_Device.h
+Build Time Elapsed:  00:00:02
+</pre>
+</body>
+</html>
