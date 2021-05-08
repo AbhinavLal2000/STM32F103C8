@@ -3,7 +3,7 @@
  * Auto generated Run-Time-Environment Configuration File
  *      *** Do not modify ! ***
  *
- * Project: 'uart_tx' 
+ * Project: 'ADC' 
  * Target:  'Target 1' 
  */
 

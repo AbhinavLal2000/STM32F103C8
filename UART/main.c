@@ -1,27 +1,30 @@
-#include <stm32f10x.h>
-#include "systick.h"
 #include "uart.h"
+#include "systick.h"
 
-/* 
-UART PINs
-
-UART1 PA9 	TX PA10 RX		72 MHz max clock
-UART2 PA2 	TX PA3 	RX		36 MHz max clock
-UART3 PB10 	TX PB11 RX		36 MHz max clock
-
+/*
+USART-2 
+TX: 	PA2
+RX: 	PA3
+Baud: 9600
 */
 
-char c = 0;
+int  n = 234;
+char  c[10];
 
 int main(void)
 {
 	systick_init();
-	uart_init(2,9600);
+	uart_init();
 	
 	while(1)
 	{
-		c = uart_rx(2);
-		uart_tx(2,c);	
+		uart_tx_str("Converted data type");
+		uart_tx('\n');
+		int2char(n,c);
+		uart_tx_str(c);
+		uart_tx('\n');
+		str_empty(c);
+		delayms(500);
 	}
 }
 
